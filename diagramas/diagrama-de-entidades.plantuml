@@ -1,0 +1,97 @@
+@startuml Entidades
+package enums {
+  enum SexoEnum {
+    masculino,
+    feminino,
+    outros
+  }
+
+  enum TipoSanguineoEnum {
+    A,
+    B,
+    AB,
+    O
+  }
+
+  enum TipoSanguineoRhEnum {
+    positivo,
+    negativo
+  }
+}
+
+entity TipoSanguineo {
+  tipo: TipoSanguineoEnum
+  rh: TipoSanguineoRhEnum
+}
+
+entity Historico {
+  nome: string
+  descricao: string
+}
+
+entity Alergia {
+  nome: string
+  descricao: string
+}
+
+entity Remedio {
+  nome: string
+  dosagem: string
+}
+
+entity ExameInfo {
+  sinonimia: string
+  material: string
+  conservacao: string
+  preparo:  string
+  metodo:  string
+  interferentes:  string
+  valoresNormais: string
+  interpretacao:  string
+  examesRelacionados: string[]
+}
+
+entity Exame {
+  dataRealizacao: Date
+  dataResultado: Date
+  resultado: string
+  info: ExameInfo
+  documento: Byte[]
+}
+
+entity Medico {
+  nome: string
+  crm: string
+  especialidade: string
+}
+
+entity SolicitacaoExame {
+  medico: Medico
+  exame: Exame
+  usuario: Usuario
+}
+
+entity Usuario {
+  dataNascimento: Date
+  nome: string
+  sexo: SexoEnum
+  sangue: TipoSanguineo
+  historicoMedico: Historico[]
+  alergias: Alergia[]
+  remedios: Remedio[]
+  exames: Exame[]
+}
+
+Usuario }o--|| Exame
+Usuario }o--|| Remedio
+Usuario }o--|| Alergia
+Usuario }o--|| Historico
+Usuario ||--|{ TipoSanguineo
+
+SolicitacaoExame ||--o{ Medico
+SolicitacaoExame ||--o{ Exame
+SolicitacaoExame ||--o{ Usuario
+
+Exame ||--o{ ExameInfo
+
+@enduml
