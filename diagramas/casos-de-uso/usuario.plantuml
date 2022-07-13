@@ -1,0 +1,20 @@
+@startuml usuário
+
+left to right direction
+actor usuario as u
+package modulo6 {
+  usecase "Selecionar o exame pendente desejado" as UC1
+  usecase "Redirecionado para tela User - Exam Info" as UC2
+  usecase "Clicar no botão Registrar Resultado" as UC3
+  usecase "Redirecionado para tela User - Add Exam 1" as UC4
+  usecase "Preencher o formulário e anexar o documento em PDF ou imagem" as UC5
+  usecase "Clicar no botão Salvar" as UC6
+}
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+u --> UC5
+u --> UC6
+
+@enduml

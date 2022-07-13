@@ -1,4 +1,4 @@
-@startuml teste
+@startuml doutor
 
 left to right direction
 actor Doctor as d

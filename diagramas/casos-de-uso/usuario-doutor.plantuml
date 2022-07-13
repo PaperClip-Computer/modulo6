@@ -1,0 +1,22 @@
+@startuml usuario e doutor
+
+left to right direction
+actor Usuario as u
+actor Doutor as d
+package modulo6 {
+  usecase "Ver detalhes sobre o doutor responsável" as UC1
+  usecase "Cadastrar os resultados de um exame" as UC2
+  usecase "Ver o resultado de um exame já realizado" as UC3
+  usecase "Ver detalhes sobre um paciente" as UC4
+  usecase "Ver detalhes sobre um exame" as UC5
+  usecase "Pedir um exame a um usuário" as UC6
+}
+u --> UC1
+u --> UC2
+u --> UC3
+d --> UC4
+d --> UC5
+d --> UC6
+d --> UC3
+
+@enduml
