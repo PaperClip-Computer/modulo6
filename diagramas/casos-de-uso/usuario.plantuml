@@ -9,12 +9,23 @@ package modulo6 {
   usecase "Redirecionado para tela User - Add Exam 1" as UC4
   usecase "Preencher o formulário e anexar o documento em PDF ou imagem" as UC5
   usecase "Clicar no botão Salvar" as UC6
+  usecase "Clicar no menu" as UC7
+  usecase "Selecionar a opção Histórico" as UC8
+  usecase "Redirecionado para tela User - Exam History" as UC9
+  usecase "Selecionar o exame desejado" as UC10
+  usecase "Redirecionado para tela Doctor - Pacient Exam Details" as UC11
 }
+
 u --> UC1
 u --> UC2
 u --> UC3
 u --> UC4
 u --> UC5
 u --> UC6
+u --> UC7
+u --> UC8
+u --> UC9
+u --> UC10
+u --> UC11
 
 @enduml
