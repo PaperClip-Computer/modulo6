@@ -1,0 +1,41 @@
+@startuml doutor
+
+left to right direction
+actor Doctor as d
+package modulo6 {
+  usecase "Ver os resultados de um exame" as UC1
+  usecase "Seguir a trilha 2 para chegar à página de detalhes de um usuário" as UC2
+  usecase "Clicar no botão Ver Exames" as UC3
+  usecase "Redirecionado para tela Doctor - Pacient Exams List" as UC4
+  usecase "Clicar na seta no canto direito do card com o nome do exame" as UC5
+  usecase "Redirecionado para tela Doctor - Pacient Exam Details" as UC6
+  usecase "Seguir a trilha 1 ou a trilha 2 para encontrar o paciente ou o exame desejado, respectivamente" as UC7
+  usecase "Clicar no botão Pedir Exame" as UC8
+  usecase "Redirecionado para tela Doctor - Order Exam" as UC9
+  usecase "Completar o formulário com o paciente e o exame desejados" as UC10
+  usecase "Clicar no botão Confirmar" as UC11
+  usecase "Clicar no botão Ver exames" as UC12
+  usecase "Redirecionado para tela Doctor - Search Page - Exams" as UC13
+  usecase "Pesquisar pelo nome do exame desejado" as UC14
+  usecase "Clicar na seta no canto direito do card com o nome do exame" as UC15
+  usecase "Redirecionado para tela Doctor - Exams Info" as UC16
+}
+
+d --> UC1
+d --> UC2
+d --> UC3
+d --> UC4
+d --> UC5
+d --> UC6
+d --> UC7
+d --> UC8
+d --> UC9
+d --> UC10
+d --> UC11
+d --> UC12
+d --> UC13
+d --> UC14
+d --> UC15
+d --> UC16
+
+@enduml
