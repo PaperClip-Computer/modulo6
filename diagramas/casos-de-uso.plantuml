@@ -1,0 +1,20 @@
+@startuml teste
+
+left to right direction
+actor Doctor as d
+package modulo6 {
+  usecase "Ver os resultados de um exame" as UC1
+  usecase "Seguir a trilha 2 para chegar à página de detalhes de um usuário" as UC2
+  usecase "Clicar no botão Ver Exames" as UC3
+  usecase "Redirecionado para tela Doctor - Pacient Exams List" as UC4
+  usecase "Clicar na seta no canto direito do card com o nome do exame" as UC5
+  usecase "Redirecionado para tela Doctor - Pacient Exam Details" as UC6
+}
+d --> UC1
+d --> UC2
+d --> UC3
+d --> UC4
+d --> UC5
+d --> UC6
+
+@enduml
